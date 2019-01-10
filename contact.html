@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+	Author: 		Isaac Terry
+	Purpose: 		This document conveys a way for users to send a message about the website.
+-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Contact</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"> 
+		<link rel="stylesheet" type="text/css" href="css/style.css"> 
+	</head>
+	<body> <!-- Note: All <a> elements use some sort of CSS roll-over effect when user hovers over the element. -->
+		<div class="container">
+			<header>
+				<h1 class="website-title">CSCI N241 Final Project by Isaac Terry</h1>
+				<nav class="website-nav">
+					<ul>
+						<li><a href="home.html">Home</a></li>
+						<li><a href="resources.html">Resources</a></li>
+						<li><a href="motivation.html">Motivation</a></li>
+						<li><a class="active" href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<!-- marking thematic shift in content -->
+			<hr>
+			
+			<h2 class="webpage-title">Contact</h2>
+			<p> 
+				There is a form provided below to provide any comments that you have. 
+				Your feedback is always welcomed and appreciated. 
+				A reply will be sent to your email address as soon as possible.
+			</p> 
+			
+			<form id="a-form" action="http://cs.iupui.edu/~iwterry/n241/finalProject/website/contact.html" method="post">	
+				<p>
+					<label for="submitter-name">Your name <strong>(required)</strong></label> <br>
+					<input type="text" id="submitter-name" name="name"  value="" required>
+				</p>
+				<p>
+					<label for="submitter-email">Your email <strong>(required)</strong></label> <br>
+					<input type="email" id="submitter-email" name="email"  value="" required> 
+				</p>
+				<fieldset> 
+					<legend>What is your purpose for commenting? <strong>(required)</strong></legend> 
+					<p>Please select <strong>only one option</strong>.</p>
+					<!-- Note: Safari does not implement the attribute "required" -->
+					<!-- Note: According to https://www.w3.org/TR/html5/forms.html#the-required-attribute - it's best 
+					practice to provide a default checked option and have "required" attribute on all options. -->
+					<!-- I will hide default choice using CSS in order to know whether user made a choice and not confuse users. -->
+					<p class="hide"> 
+						<input type="radio" id="purpose-not-given" name="purpose" value="" required checked>
+						<!-- I want a good message for text-only (w/ no CSS) situations -->
+						<label for="purpose-not-given">
+							This default option is not meant to be chosen. Please choose from among the remaining options.
+						</label>
+					</p>
+					<p>
+						<input type="radio" id="purpose-copyright" name="purpose" value="copyright" required>
+						<label for="purpose-copyright">Report a copyright concern.</label>
+					</p>
+					<p>
+						<input type="radio" id="purpose-error" name="purpose" value="error" required> 
+						<label for="purpose-error">Report an error.</label> 
+					</p>
+					<p>
+						<input type="radio" id="purpose-resources" name="purpose" value="resources" required>
+						<label for="purpose-resources">Suggest additional resources that should be added.</label>
+					</p>
+					<p>
+						<input type="radio" id="purpose-other" name="purpose" value="other" > 
+						<label for="purpose-other">Have another purpose for commenting.</label>
+					</p>
+				</fieldset>
+				<p>
+					<label for="submitter-message">Enter your message in the text box below. <strong>(required)</strong></label> <br>
+					<textarea id="submitter-message" name="message" rows="15" 
+							  cols="40" placeholder="Place message here" required></textarea>
+				</p>
+				<p>
+					When you are ready to submit this form, click the submit button below. If you need to start
+					over, click the reset button below.
+				</p>
+				<div class="buttons-div">
+					<input type="submit" id="roll-over-effect" class="button"  value="submit form"> <br>
+					<input type="reset" class="button"  value="reset form">
+				</div>
+			</form>
+			
+			<!-- marking thematic shift in content -->
+			<hr>
+			
+			<footer>
+				<p>
+					This website is created and designed by me, Isaac Terry, for my CSCI N241 final 
+					project assignment. Any recommendations made on this website are my own and are 
+					only based on my experience, without any profit motives. I have no ownership rights 
+					to any images used on this website. All images are free to use, and credit is given
+					to the website they were retrieved from.
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

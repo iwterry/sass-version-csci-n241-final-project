@@ -1,0 +1,255 @@
+/*
+	Author: 	Isaac Terry
+	Purpose: 	This document is the external stylesheet for my CS N241 final project.
+*/
+/* Note: These @font-face's were obtained using http://www.localfont.com/ */
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-style: normal;
+  src: url("http://fonts.gstatic.com/s/raleway/v11/JDau3G46nqY5-B-S9E_nwg.eot");
+  src: url("http://fonts.gstatic.com/s/raleway/v11/JDau3G46nqY5-B-S9E_nwg.eot?#iefix") format("embedded-opentype"), local("Raleway"), local("Raleway-regular"), url("http://fonts.gstatic.com/s/raleway/v11/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2") format("woff2"), url("http://fonts.gstatic.com/s/raleway/v11/cIFypx4yrWPDz3zOxk7hIQLUuEpTyoUstqEm5AMlJo4.woff") format("woff"), url("http://fonts.gstatic.com/s/raleway/v11/bIcY3_3JNqUVRAQQRNVteQ.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=IP_NSg73bUZGuyb3zF6qcQ&skey=30a27f2564731c64&v=v11#Raleway") format("svg"); }
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-style: normal;
+  src: url("http://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaI1QlYEbsez9cZjKsNMjLOwM.eot");
+  src: url("http://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaI1QlYEbsez9cZjKsNMjLOwM.eot?#iefix") format("embedded-opentype"), local("Raleway Bold"), local("Raleway-700"), url("http://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaIwzyDMXhdD8sAj6OAJTFsBI.woff2") format("woff2"), url("http://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaI73hpw3pgy2gAi-Ip7WPMi0.woff") format("woff"), url("http://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaIy3USBnSvpkopQaUR-2r7iU.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=JbtMzqLaYbbbCL9X6EvaI6WUboTb-jS2tyCOQMtm97g&skey=e507c3e2b7915ad1&v=v11#Raleway") format("svg"); }
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-style: italic;
+  src: url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF__Y6323mHUZFJMgTvxaG2iE.eot");
+  src: url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF__Y6323mHUZFJMgTvxaG2iE.eot?#iefix") format("embedded-opentype"), local("Raleway Italic"), local("Raleway-italic"), url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF_5Bw1xU1rKptJj_0jans920.woff2") format("woff2"), url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF_7O3LdcAZYWl9Si6vvxL-qU.woff") format("woff"), url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF_6CWcynf_cDxXwCLxiixG1c.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=IIm-lPOtfVKQy0GMiczF_5bd9NUM7myrQQz30yPaGQ4&skey=bf44ee29381a37b0&v=v11#Raleway") format("svg"); }
+
+/********************************************* styling body and .container **********************************************/
+body {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: small;
+  /* standardizing the font that will be used */
+  color: #000000;
+  background-color: #fffeec;
+  font-weight: normal;
+  padding: 0.5em; }
+
+.container {
+  max-width: 1000px;
+  /* helps keep the page from not being to wide on big/wide devices */
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.3em;
+  line-height: 1.5;
+  /* might help to make it more readable */
+  background-color: #ffffff;
+  padding: 0.5em; }
+
+/* determing which elements should be bold all the time */
+h1.website-title, h2.webpage-title,
+section h3, nav.webpage-nav h3, th, strong {
+  font-weight: bold; }
+
+/* determining which elements should have their text or images be centered */
+h1.website-title, h2.webpage-title,
+div.image {
+  text-align: center; }
+
+/************************** stylings for all header level elements used ***************/
+h1.website-title {
+  font-size: 1.5em; }
+
+h2.webpage-title {
+  font-size: 2.5em; }
+
+h3 {
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
+  /* create some distance from the content directly below */ }
+
+/************************ stylings for all links  (universally applied) ************************/
+/* removing all underlines because it can make it difficult to read and making all links bold instead */
+a {
+  text-decoration: none;
+  font-weight: bold; }
+
+/* setting color for all unvisited links */
+a:link {
+  color: #3124ea;
+  /* bluish color */ }
+
+/* setting color for all visited links */
+a:visited {
+  color: #30502a;
+  /* greenish color */ }
+
+/* underlining (with a dotted border) for all links that are be hovered */
+a:hover {
+  border-bottom: 2px dotted #000000; }
+
+/****************************** stylings for all <hr> ******************************/
+hr {
+  /* Note: styling adapted from http://stackoverflow.com/questions/6382023/changing-the-color-of-an-hr-element */
+  width: 60%;
+  display: block;
+  margin: 2em auto;
+  border: none;
+  border-top: 1px solid #7d7d7d; }
+
+/********** stylings for all lists related elements; these are universally applied **********/
+/* creating an indentation and additional spacing for all <li> and <dd> */
+li, dd {
+  margin-left: 1.5em;
+  margin-bottom: 0.8em; }
+
+/* setting top and bottom margins unordered, ordered, and definition lists */
+ol, ul, dl {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; }
+
+/* setting marker style for all unordered lists */
+ul {
+  list-style-type: square; }
+
+/* setting marker style for all ordered lists */
+ol {
+  list-style-type: lower-roman; }
+
+/* setting left margin of all definition lists */
+dl {
+  margin-left: 1em; }
+
+/************************ styling input controls (universally applied) ***************************/
+input, textarea {
+  border: 1px solid #635e5e;
+  /* grayish border */ }
+
+/************************ styling sections (universally applied) and table of contents (webpage navigation) ***************************/
+section, nav.webpage-nav {
+  margin-top: 2em; }
+
+/*************************************************** styling navigation *******************************************/
+nav.website-nav {
+  width: 100%;
+  padding: 0.5em 0;
+  text-align: center;
+  margin: 0 auto; }
+
+nav.website-nav ul {
+  padding: 0; }
+
+nav.website-nav li {
+  display: inline;
+  list-style-type: none;
+  margin: 0 5%;
+  padding: 0; }
+
+/* overrides selector a:visited */
+nav.website-nav a:link, nav.website-nav a:visited,
+nav.webpage-nav a:link, nav.webpage-nav a:visited {
+  /* sets color to some type of red */
+  color: #a90a0a; }
+
+/* overrides selectors "nav.website-nav a:link" and "nav.website-nav a:visited"  */
+/* sets font color to white, background color to black, and removes border */
+nav.website-nav a.active:link, nav a.active:visited {
+  color: #ffffff;
+  background-color: #000000;
+  padding: 0.2em;
+  /* emphasize the readability w/ background-color */
+  border: none; }
+
+/*********************************** stylings the form **************************************/
+#a-form {
+  margin-top: 1.5em;
+  border: 1px solid #000000;
+  padding: 0.5em;
+  background-color: #ffffff; }
+
+#a-form > p {
+  margin: 1.2em 0; }
+
+#a-form fieldset {
+  border: none; }
+
+#a-form fieldset p {
+  margin: 0.4em 1em; }
+
+#a-form legend {
+  /* needed because was not playing nice with Edge and Internet Explorer */
+  display: inline; }
+
+#a-form textarea {
+  padding: 0.2em; }
+
+#a-form div.buttons-div {
+  /* centering input buttons */
+  text-align: center;
+  margin: 0.5em auto; }
+
+#a-form input.button {
+  padding: 0.5em;
+  /* make button seem bigger */
+  margin: 1em 0;
+  /* give some space for button */
+  background-color: #ececec;
+  /* light grayish background */
+  border: 2px solid #383838;
+  font-size: 1em; }
+
+#a-form input.button:hover {
+  /* when hovering, change input buttons' background color and make font bold */
+  background-color: #b4b4b4;
+  font-weight: bold; }
+
+/******************************************** stylings for footer ************************************/
+footer {
+  padding: 0.3em;
+  background-color: #fffbfb; }
+
+/************************** additional stylings ******************************/
+/* styling book titles */
+a.book-title {
+  font-style: italic; }
+
+/* styling the quotation used */
+figure.quotation {
+  width: 70%;
+  margin: 1em auto;
+  padding: 0.5em 0 0.5em 2em;
+  border: 1px solid #000000; }
+
+/* styling <div> that contains an image */
+div.image {
+  margin-bottom: 2em; }
+
+/* anything that should be hidden will get the "hide" class */
+.hide {
+  display: none; }
+
+/*************************** attempting to make the website more mobile friendly with media queries *********************/
+@media screen and (max-width: 700px) {
+  nav.website-nav li {
+    /* make navigation bar more presentable by having links vertically with a wide border between links */
+    display: block;
+    border-bottom: 1px solid white;
+    margin-bottom: 0.2em;
+    /* makes it easier to see <a>'s bottom border for when hovering */ }
+  nav.website-nav {
+    /* make navigation bar more narrower */
+    width: 50%; } }
+
+@media screen and (max-width: 500px) {
+  /* the next two rules are used make scrolling easier and better appearance on smaller devices */
+  body {
+    background-color: #ffffff; }
+  div.container {
+    width: 100%;
+    padding: 0; }
+  #a-form textarea {
+    /* adjust text box */
+    width: 70%;
+    height: 13em; } }
+
+/*# sourceMappingURL=style.css.map */
