@@ -1,16 +1,24 @@
-
-/********************************************* styling body and the main container **********************************************/
 * {
 	box-sizing: border-box;
 }
 
 body {
-	font-family: "Raleway", Arial, sans-serif;
+	font-family: $primary_font, Arial, sans-serif;
 	font-size: small; /* standardizing the font that will be used */
 	color: #000000;
 	background-color: #fffeec;
 	font-weight: normal;
-	padding: 0.5em;
+	padding: 0.5rem;
+	
+	@media screen and (max-width: $small_devices_breakpoint) {
+		& {
+			background-color: #ffffff;
+		}
+	}
+}
+
+main {
+	margin: 2rem 0;
 }
 
 /************************ stylings for all links  (universally applied) ************************/  
@@ -41,7 +49,12 @@ input, textarea {
 	border: 1px solid #635e5e; /* grayish border */
 }
 
-/************************ styling sections (universally applied) and table of contents (webpage navigation) ***************************/
-section, nav.webpage-nav {
-	margin-top: 2em;
+/************************ styling sections (universally applied) ***************************/
+section, .section {
+	margin-top: 2rem;
+}
+
+/************************* styling table headers and strong elments *************************/
+th, strong {
+	font-weight: bold;
 }

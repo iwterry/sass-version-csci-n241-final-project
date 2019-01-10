@@ -1,5 +1,5 @@
 .main-container {
-	max-width: 1000px; /* helps keep the page from not being to wide on big/wide devices */
+	max-width: $website_max_width; /* helps keep the page from not being to wide on big/wide devices */
 	width: 80%;
 	margin-right: auto;
 	margin-left: auto;
@@ -7,4 +7,24 @@
 	line-height: 1.5; /* might help to make it more readable */
 	background-color: #fff;
 	padding: 0.5rem;
+	
+	@media screen and (max-width: $small_devices_breakpoint) {
+		& { 
+			width: 100%;
+			padding: 0;
+		}
+	}
+}
+
+.image-container {
+	text-align: center;
+	margin-bottom: 2rem; 
+}
+
+
+.quotation-container {
+	width: 70%;
+	margin: 1rem auto; 
+	padding: 0.5rem 0 0.5rem 2rem;
+	border: 1px solid #000000; 
 }

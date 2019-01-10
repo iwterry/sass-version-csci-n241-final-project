@@ -28,7 +28,7 @@
 			<main>
 				<h2 class="webpage-title">Home</h2>
 
-				<div class="image">
+				<div class="image-container">
 					<!-- setting width and height attributes only so the browser can better do its job -->
 					<img id="gif-image" src="images/chalkboard.gif" width="96" height="80" alt="'welcome' is written in white text on a green chalkboard">
 					<p> 	
@@ -40,7 +40,7 @@
 				</div>
 				
 				
-				<figure class="quotation">
+				<figure class="quotation-container">
 					<blockquote id="a-blockquote"
 								cite="https://www.brainyquote.com/quotes/quotes/j/jeanpiaget751077.html?src=t_education">
 						<p>
@@ -59,9 +59,9 @@
 				</figure>
 				
 				<!-- table of contents for this webpage -->				
-				<nav class="webpage-nav">
-					<h3>Table of contents:</h3>
-					<ol>
+				<nav class="webpage-nav section">
+					<h3 class="section-title">Table of contents:</h3>
+					<ol class="webpage-nav-list">
 						<li><a href="#site-description">Website description</a></li>
 						<li><a href="#site-mission">Mission</a></li>
 						<li><a href="#site-vision">Vision</a></li>
@@ -71,12 +71,12 @@
 				
 				<!-- description of the total website -->
 				<section id="site-description">
-					<h3>Website description</h3>
+					<h3 class="section-title">Website description</h3>
 					<p>
 						This website contains the following four webpages (with an explanation of each):
 					</p>
 					<!-- describing each webpage of the website -->
-					<dl id="definition-list">
+					<dl class="website-explanation-list">
 						<dt>Home</dt>
 						<dd>
 							<p>Explains the mission, vision, and goals of this website.</p>
@@ -98,7 +98,7 @@
 				
 				<!-- section for mission statement -->
 				<section id="site-mission">
-					<h3>Mission</h3>
+					<h3 class="section-title">Mission</h3>
 					<p>
 						The mission of this website is to help get more people interested in machine learning and to
 						be a resource for ways to learn more about (and do more with) machine learning. 
@@ -107,7 +107,7 @@
 				
 				<!-- section for vision statement -->
 				<section id="site-vision">
-					<h3>Vision</h3>
+					<h3 class="section-title">Vision</h3>
 					<p>
 						The vision of this website is for it to be a light that can make the path towards learning and using 
 						machine learning easier. Regardless of their educational background, gender, income, etc., people
@@ -117,11 +117,11 @@
 				
 				<!-- section for goals -->
 				<section id="site-goals">
-					<h3>Goals</h3>
+					<h3 class="section-title">Goals</h3>
 					<p>
 						I have three major goals for this website:
 					</p>
-					<ul id="unordered-list">
+					<ul class="website-goals-list">
 						<li>Provide resources to explain what machine learning is and how it is being used in the world</li>
 						<li>Provide resources for practicing and knowing some fundamentals of machine learning</li>
 						<li>Provide some motivation for learning machine learning when the journey gets hard</li> 
@@ -129,7 +129,7 @@
 				</section>
 			</main>
 			
-			<footer>
+			<footer class="main-footer">
 				<p>
 					This website is created and designed by me, Isaac Terry, for my CSCI N241 final 
 					project assignment. Any recommendations made on this website are my own and are 

@@ -68,7 +68,6 @@ table {
   src: url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF__Y6323mHUZFJMgTvxaG2iE.eot");
   src: url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF__Y6323mHUZFJMgTvxaG2iE.eot?#iefix") format("embedded-opentype"), local("Raleway Italic"), local("Raleway-italic"), url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF_5Bw1xU1rKptJj_0jans920.woff2") format("woff2"), url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF_7O3LdcAZYWl9Si6vvxL-qU.woff") format("woff"), url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF_6CWcynf_cDxXwCLxiixG1c.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=IIm-lPOtfVKQy0GMiczF_5bd9NUM7myrQQz30yPaGQ4&skey=bf44ee29381a37b0&v=v11#Raleway") format("svg"); }
 
-/********************************************* styling body and the main container **********************************************/
 * {
   box-sizing: border-box; }
 
@@ -79,7 +78,13 @@ body {
   color: #000000;
   background-color: #fffeec;
   font-weight: normal;
-  padding: 0.5em; }
+  padding: 0.5rem; }
+  @media screen and (max-width: 500px) {
+    body {
+      background-color: #ffffff; } }
+
+main {
+  margin: 2rem 0; }
 
 /************************ stylings for all links  (universally applied) ************************/
 /* removing all underlines because it can make it difficult to read and making all links bold instead */
@@ -106,9 +111,13 @@ input, textarea {
   border: 1px solid #635e5e;
   /* grayish border */ }
 
-/************************ styling sections (universally applied) and table of contents (webpage navigation) ***************************/
-section, nav.webpage-nav {
-  margin-top: 2em; }
+/************************ styling sections (universally applied) ***************************/
+section, .section {
+  margin-top: 2rem; }
+
+/************************* styling table headers and strong elments *************************/
+th, strong {
+  font-weight: bold; }
 
 .main-container {
   max-width: 1000px;
@@ -116,178 +125,143 @@ section, nav.webpage-nav {
   width: 80%;
   margin-right: auto;
   margin-left: auto;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   line-height: 1.5;
   /* might help to make it more readable */
-  background-color: #ffffff;
-  padding: 0.5em; }
+  background-color: #fff;
+  padding: 0.5rem; }
+  @media screen and (max-width: 500px) {
+    .main-container {
+      width: 100%;
+      padding: 0; } }
 
-/* determing which elements should be bold all the time */
-h1.website-title, h2.webpage-title,
-section h3, nav.webpage-nav h3, th, strong {
-  font-weight: bold; }
+.image-container {
+  text-align: center;
+  margin-bottom: 2rem; }
 
-/* determining which elements should have their text or images be centered */
-h1.website-title, h2.webpage-title,
-div.image {
-  text-align: center; }
+.quotation-container {
+  width: 70%;
+  margin: 1rem auto;
+  padding: 0.5rem 0 0.5rem 2rem;
+  border: 1px solid #000000; }
 
-/************************** stylings for all header level elements used ***************/
-h1.website-title {
-  font-size: 1.5em; }
+.website-goals-list, .resource-list, .webpage-nav-list, .website-explanation-list {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+  .website-goals-list li, .resource-list li, .webpage-nav-list li, .website-explanation-list li, .website-goals-list dd, .resource-list dd, .webpage-nav-list dd, .website-explanation-list dd {
+    margin-left: 1.5rem;
+    margin-bottom: 0.8rem; }
 
-h2.webpage-title {
-  font-size: 2.5em; }
-
-h3 {
-  font-size: 1.4em;
-  margin-bottom: 0.5em;
-  /* create some distance from the content directly below */ }
-
-/********** stylings for all lists related elements; these are universally applied **********/
-/* creating an indentation and additional spacing for all <li> and <dd> */
-li, dd {
-  margin-left: 1.5em;
-  margin-bottom: 0.8em; }
-
-/* setting top and bottom margins unordered, ordered, and definition lists */
-ol, ul, dl {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em; }
-
-/* setting marker style for all unordered lists */
-ul {
+.website-goals-list, .resource-list {
   list-style-type: square; }
 
-/* setting marker style for all ordered lists */
-ol {
+.webpage-nav-list {
   list-style-type: lower-roman; }
 
-/* setting left margin of all definition lists */
-dl {
-  margin-left: 1em; }
+.website-explanation-list {
+  margin-left: 1rem; }
 
-/*************************************************** styling navigation *******************************************/
-nav.website-nav {
-  width: 100%;
-  padding: 0.5em 0;
-  text-align: center;
-  margin: 0 auto; }
-
-nav.website-nav ul {
-  padding: 0; }
-
-nav.website-nav li {
-  display: inline;
-  list-style-type: none;
-  margin: 0 5%;
-  padding: 0; }
-
-/* overrides selector a:visited */
-nav.website-nav a:link, nav.website-nav a:visited,
-nav.webpage-nav a:link, nav.webpage-nav a:visited {
-  /* sets color to some type of red */
-  color: #a90a0a; }
-
-/* overrides selectors "nav.website-nav a:link" and "nav.website-nav a:visited"  */
-/* sets font color to white, background color to black, and removes border */
-nav.website-nav a.active:link, nav a.active:visited {
-  color: #ffffff;
-  background-color: #000000;
-  padding: 0.2em;
-  /* emphasize the readability w/ background-color */
-  border: none; }
-
-/*********************************** stylings the form **************************************/
-#a-form {
-  margin-top: 1.5em;
-  border: 1px solid #000000;
-  padding: 0.5em;
-  background-color: #ffffff; }
-
-#a-form > p {
-  margin: 1.2em 0; }
-
-#a-form fieldset {
-  border: none; }
-
-#a-form fieldset p {
-  margin: 0.4em 1em; }
-
-#a-form legend {
-  /* needed because was not playing nice with Edge and Internet Explorer */
-  display: inline; }
-
-#a-form textarea {
-  padding: 0.2em; }
-
-#a-form div.buttons-div {
-  /* centering input buttons */
-  text-align: center;
-  margin: 0.5em auto; }
-
-#a-form input.button {
-  padding: 0.5em;
-  /* make button seem bigger */
-  margin: 1em 0;
-  /* give some space for button */
-  background-color: #ececec;
-  /* light grayish background */
-  border: 2px solid #383838;
-  font-size: 1em; }
-
-#a-form input.button:hover {
-  /* when hovering, change input buttons' background color and make font bold */
-  background-color: #b4b4b4;
+/******************** utility classes ********************/
+.website-title, .webpage-title, .section-title {
   font-weight: bold; }
 
-/******************************************** stylings for footer ************************************/
-footer {
-  padding: 0.3em;
+.website-title, .webpage-title {
+  text-align: center; }
+
+/**************************** stylings for titles ***************/
+.website-title {
+  font-size: 1.5rem; }
+
+.webpage-title {
+  font-size: 2.5rem; }
+
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  /* create some distance from the content directly below */ }
+
+.book-title {
+  font-style: italic; }
+
+/*********************************** stylings the form **************************************/
+#contact-form {
+  margin-top: 1.5rem;
+  border: 1px solid #000000;
+  padding: 0.5rem;
+  background-color: #ffffff; }
+  #contact-form > p {
+    margin: 1.2rem 0; }
+  #contact-form fieldset {
+    border: none; }
+  #contact-form fieldset p {
+    margin: 0.4rem 1rem; }
+  #contact-form legend {
+    /* needed because was not playing nice with Edge and Internet Explorer */
+    display: inline; }
+  #contact-form textarea {
+    padding: 0.2rem; }
+  @media screen and (max-width: 500px) {
+    #contact-form textarea {
+      width: 70%;
+      height: 13rem; } }
+  #contact-form .buttons-container {
+    /* centering input buttons */
+    text-align: center;
+    margin: 0.5rem auto; }
+  #contact-form .button {
+    padding: 0.5rem;
+    /* make button seem bigger */
+    margin: 1rem 0;
+    /* give some space for button */
+    background-color: #ececec;
+    /* light grayish background */
+    border: 2px solid #383838;
+    font-size: 1rem; }
+  #contact-form .button:hover {
+    /* when hovering, change input buttons' background color and make font bold */
+    background-color: #b4b4b4;
+    font-weight: bold; }
+
+.website-nav a, .webpage-nav a {
+  color: #a90a0a; }
+
+.website-nav {
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+  margin: 0 auto; }
+  .website-nav ul {
+    padding: 0; }
+  .website-nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 0 5%;
+    padding: 0; }
+    @media screen and (max-width: 700px) {
+      .website-nav li {
+        display: block;
+        border-bottom: 1px solid white;
+        margin-bottom: 0.2rem;
+        /* makes it easier to see <a>'s bottom border for when hovering */ } }
+  .website-nav a.active:link, .website-nav a.active:visited {
+    color: #ffffff;
+    background-color: #000000;
+    padding: 0.2rem;
+    /* emphasize the readability w/ background-color */
+    border: none; }
+
+@media screen and (max-width: 700px) {
+  .webpage-nav {
+    width: 50%; } }
+
+.main-footer {
+  border: 1px dashed gray;
+  padding: 0.3rem;
   background-color: #fffbfb; }
 
 /************************** additional stylings ******************************/
-/* styling book titles */
-a.book-title {
-  font-style: italic; }
-
-/* styling the quotation used */
-figure.quotation {
-  width: 70%;
-  margin: 1em auto;
-  padding: 0.5em 0 0.5em 2em;
-  border: 1px solid #000000; }
-
-/* styling <div> that contains an image */
-div.image {
-  margin-bottom: 2em; }
-
 /* anything that should be hidden will get the "hide" class */
 .hide {
   display: none; }
-
-/*************************** attempting to make the website more mobile friendly with media queries *********************/
-@media screen and (max-width: 700px) {
-  nav.website-nav li {
-    /* make navigation bar more presentable by having links vertically with a wide border between links */
-    display: block;
-    border-bottom: 1px solid white;
-    margin-bottom: 0.2em;
-    /* makes it easier to see <a>'s bottom border for when hovering */ }
-  nav.website-nav {
-    /* make navigation bar more narrower */
-    width: 50%; } }
-
-@media screen and (max-width: 500px) {
-  /* the next two rules are used make scrolling easier and better appearance on smaller devices */
-  body {
-    background-color: #ffffff; }
-  div.main-container {
-    width: 100%;
-    padding: 0; }
-  #a-form textarea {
-    /* adjust text box */
-    width: 70%;
-    height: 13em; } }
 
 /*# sourceMappingURL=style.css.map */

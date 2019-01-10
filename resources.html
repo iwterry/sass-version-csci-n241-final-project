@@ -27,7 +27,7 @@
 			<main>	
 				<h2 class="webpage-title">Resources</h2>
 				
-				<div class="image">
+				<div class="image-container">
 					<!-- setting width and height attributes only so the browser can better do its job -->
 					<img id="png-image" src="images/flying_eagle.png" width="279" height="300" alt="a flying eagle">
 					<p>
@@ -39,9 +39,9 @@
 				</div>
 				
 				<!-- table of contents for this webpage -->				
-				<nav class="webpage-nav">
-					<h3>Table of contents:</h3>
-					<ol id="ordered-list">
+				<nav class="webpage-nav section">
+					<h3 class="section-title">Table of contents:</h3>
+					<ol class="webpage-nav-list">
 						<li><a href="#introduction">What is machine learning?</a></li>
 						<li><a href="#transformation">How is machine learning transforming the world?</a></li>
 						<li>
@@ -58,8 +58,8 @@
 				
 				<!-- resources that explain what machine learning is -->
 				<section id="introduction">
-					<h3>What is machine learning?</h3>
-					<ul>
+					<h3 class="section-title">What is machine learning?</h3>
+					<ul class="resource-list">
 						<li>
 							<a href="https://en.wikipedia.org/wiki/Machine_learning">
 								an article
@@ -77,8 +77,8 @@
 				
 				<!-- resources for how machine learning is used in the real world -->
 				<section id="transformation">
-					<h3>How is machine learning transforming the world?</h3>
-					<ul>
+					<h3 class="section-title">How is machine learning transforming the world?</h3>
+					<ul class="resource-list" >
 						<li>
 							<a href="https://medium.com/udacity/this-week-in-machine-learning-3-march-2017-22e682b3a1ff#.jx9u31cco">
 								article 1
@@ -100,8 +100,8 @@
 				
 				<!-- resources for math help -->
 				<section id="brushup">
-					<h3>What are some websites I can use to brushup on the basic mathematics for machine learning?</h3>
-					<ul>
+					<h3 class="section-title">What are some websites I can use to brushup on the basic mathematics for machine learning?</h3>
+					<ul class="resource-list">
 						<li>
 							<a href="https://www.khanacademy.org/">
 								Khan Academy
@@ -117,7 +117,7 @@
 				
 				<!-- resources for various software for machine learning -->
 				<section id="software">
-					<h3>What are some software that are used for machine learning?</h3>
+					<h3 class="section-title">What are some software that are used for machine learning?</h3>
 					<p>
 						<a href="https://www.python.org/">Python</a> and 
 						<a href="https://cran.r-project.org/">R</a> are probably the two most
@@ -136,8 +136,8 @@
 				
 				<!-- resources for learning the basics of machine learning -->
 				<section id="basics">
-					<h3>What are some basic introductory resources for learning machine learning?</h3>
-					<ul>
+					<h3 class="section-title">What are some basic introductory resources for learning machine learning?</h3>
+					<ul class="resource-list">
 						<li>
 							<a class="book-title" href="https://www.amazon.com/Data-Smart-Science-Transform-Information/dp/111866146X"> 
 								<cite>Data Smart: Using Data Science to Transform Information into 
@@ -168,8 +168,8 @@
 				</section>
 				<!-- resources for getting data -->
 				<section id="data">
-					<h3>Where can I find data to work with for practicing machine learning?</h3>
-					<ul>
+					<h3 class="section-title">Where can I find data to work with for practicing machine learning?</h3>
+					<ul class="resource-list">
 						<li>
 							<a href="http://archive.ics.uci.edu/ml/">
 								UCI Machine Learning Repository
@@ -184,8 +184,8 @@
 				</section>
 				<!-- resources for finding a social atmosphere for machine learning -->
 				<section id="social">
-					<h3>What are some social platforms for machine learning?</h3>
-					<ul>
+					<h3 class="section-title">What are some social platforms for machine learning?</h3>
+					<ul class="resource-list">
 						<li>
 							<a href="https://www.reddit.com/r/MachineLearning/">
 								a subreddit for machine learning
@@ -204,7 +204,7 @@
 					</ul>
 				</section>
 			</main>
-			<footer>
+			<footer class="main-footer">
 				<p>
 					This website is created and designed by me, Isaac Terry, for my CSCI N241 final 
 					project assignment. Any recommendations made on this website are my own and are 

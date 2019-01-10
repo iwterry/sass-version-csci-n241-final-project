@@ -1,0 +1,56 @@
+%navigation-links {
+	color: #a90a0a;
+}
+
+
+.website-nav {
+	width: 100%;
+	padding: 0.5rem 0;
+	text-align: center;
+	margin: 0 auto;
+	
+	ul {
+		padding: 0;
+	}
+
+	li {
+		display: inline;
+		list-style-type: none;
+		margin: 0 5%;
+		padding: 0;
+		@media screen and (max-width: $medium_devices_breakpoint) {
+			& {
+				display: block;
+				border-bottom: 1px solid white;
+				margin-bottom: 0.2rem; /* makes it easier to see <a>'s bottom border for when hovering */
+			}
+		}
+	}
+		 
+	a  {
+		@extend %navigation-links;
+		&.active:link, &.active:visited { 
+			color: #ffffff;
+			background-color: #000000;
+			padding: 0.2rem; /* emphasize the readability w/ background-color */
+			border: none;
+		}
+	}
+}
+
+.webpage-nav {
+	@media screen and (max-width: $medium_devices_breakpoint) {
+		& {
+			width: 50%;
+		}
+	}
+	
+	a {
+		@extend %navigation-links;
+	}
+}
+
+
+
+
+

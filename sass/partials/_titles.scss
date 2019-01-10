@@ -1,0 +1,31 @@
+/******************** utility classes ********************/
+%bold-text {
+	font-weight: bold; 
+}
+
+%center-inline-horizontal {
+	text-align: center;
+}
+
+/**************************** stylings for titles ***************/
+.website-title {
+	@extend %bold-text;
+	@extend %center-inline-horizontal;
+	font-size: 1.5rem;
+}
+
+.webpage-title {
+	@extend %bold-text;
+	@extend %center-inline-horizontal;
+	font-size: 2.5rem;
+}
+
+.section-title {
+	@extend %bold-text;
+	font-size: 1.4rem;
+	margin-bottom: 0.5rem; /* create some distance from the content directly below */
+}
+
+.book-title {
+	font-style: italic;
+}
