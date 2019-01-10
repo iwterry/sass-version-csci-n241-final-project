@@ -19,11 +19,9 @@
 		margin: 0 5%;
 		padding: 0;
 		@media screen and (max-width: $medium_devices_breakpoint) {
-			& {
-				display: block;
-				border-bottom: 1px solid white;
-				margin-bottom: 0.2rem; /* makes it easier to see <a>'s bottom border for when hovering */
-			}
+			display: block;
+			border-bottom: 1px solid white;
+			margin-bottom: 0.2rem; /* makes it easier to see <a>'s bottom border for when hovering */
 		}
 	}
 		 
@@ -40,9 +38,7 @@
 
 .webpage-nav {
 	@media screen and (max-width: $medium_devices_breakpoint) {
-		& {
-			width: 50%;
-		}
+		width: 50%;
 	}
 	
 	a {

@@ -11,9 +11,7 @@ body {
 	padding: 0.5rem;
 	
 	@media screen and (max-width: $small_devices_breakpoint) {
-		& {
-			background-color: #ffffff;
-		}
+		background-color: #ffffff;
 	}
 }
 

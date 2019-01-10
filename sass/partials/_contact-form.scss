@@ -23,14 +23,14 @@
 
 	textarea {
 		padding: 0.2rem;
-	}
-	
-	@media screen and (max-width: $small_devices_breakpoint) {
-		 textarea { 
+		
+		@media screen and (max-width: $small_devices_breakpoint) {
 			width: 70%;
 			height: 13rem;
 		}
 	}
+	
+
 	
 	.buttons-container { /* centering input buttons */
 		text-align: center;
