@@ -9,17 +9,36 @@
 	text-align: center;
 	margin: 0 auto;
 	
+	$is_flex_supported: false;
 	ul {
 		padding: 0;
+		
+		@supports(display: flex) {
+			$is_flex_supported: true;
+			display: flex;
+			justify-content: space-around;
+			width: 80%;
+			margin: 0 auto;
+		}
+		
+		@media screen and (max-width: $medium_devices_breakpoint) {
+			flex-direction: column;
+		}
 	}
 
-	li {
-		display: inline;
+	li {		
 		list-style-type: none;
-		margin: 0 5%;
 		padding: 0;
+		
+
+		@if not $is_flex_supported {
+			display: inline;
+			margin: 0 5%;
+		}
+		
 		@media screen and (max-width: $medium_devices_breakpoint) {
-			display: block;
+			display: if($is_flex_supported, null, block);
+			
 			border-bottom: 1px solid white;
 			margin-bottom: 0.2rem; /* makes it easier to see <a>'s bottom border for when hovering */
 		}

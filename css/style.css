@@ -79,7 +79,7 @@ body {
   background-color: #fffeec;
   font-weight: normal;
   padding: 0.5rem; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 33.5rem) {
     body {
       background-color: #ffffff; } }
 
@@ -120,7 +120,7 @@ th, strong {
   font-weight: bold; }
 
 .main-container {
-  max-width: 1000px;
+  max-width: 63rem;
   /* helps keep the page from not being to wide on big/wide devices */
   width: 80%;
   margin-right: auto;
@@ -130,7 +130,7 @@ th, strong {
   /* might help to make it more readable */
   background-color: #fff;
   padding: 0.5rem; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 33.5rem) {
     .main-container {
       width: 100%;
       padding: 0; } }
@@ -200,7 +200,7 @@ th, strong {
     display: inline; }
   #contact-form textarea {
     padding: 0.2rem; }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 33.5rem) {
       #contact-form textarea {
         width: 70%;
         height: 13rem; } }
@@ -232,14 +232,20 @@ th, strong {
   margin: 0 auto; }
   .website-nav ul {
     padding: 0; }
+    @supports (display: flex) {
+      .website-nav ul {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        margin: 0 auto; } }
+    @media screen and (max-width: 52rem) {
+      .website-nav ul {
+        flex-direction: column; } }
   .website-nav li {
-    display: inline;
     list-style-type: none;
-    margin: 0 5%;
     padding: 0; }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 52rem) {
       .website-nav li {
-        display: block;
         border-bottom: 1px solid white;
         margin-bottom: 0.2rem;
         /* makes it easier to see <a>'s bottom border for when hovering */ } }
@@ -250,7 +256,7 @@ th, strong {
     /* emphasize the readability w/ background-color */
     border: none; }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 52rem) {
   .webpage-nav {
     width: 50%; } }
 
