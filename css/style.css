@@ -2,6 +2,50 @@
 	Author: 	Isaac Terry
 	Purpose: 	This document is the external stylesheet for my CS N241 final project.
 */
+/* ============================ CSS RESET ============================ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 /* Note: These @font-face's were obtained using http://www.localfont.com/ */
 @font-face {
   font-family: 'Raleway';
@@ -24,7 +68,10 @@
   src: url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF__Y6323mHUZFJMgTvxaG2iE.eot");
   src: url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF__Y6323mHUZFJMgTvxaG2iE.eot?#iefix") format("embedded-opentype"), local("Raleway Italic"), local("Raleway-italic"), url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF_5Bw1xU1rKptJj_0jans920.woff2") format("woff2"), url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF_7O3LdcAZYWl9Si6vvxL-qU.woff") format("woff"), url("http://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF_6CWcynf_cDxXwCLxiixG1c.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=IIm-lPOtfVKQy0GMiczF_5bd9NUM7myrQQz30yPaGQ4&skey=bf44ee29381a37b0&v=v11#Raleway") format("svg"); }
 
-/********************************************* styling body and .container **********************************************/
+/********************************************* styling body and the main container **********************************************/
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: "Raleway", Arial, sans-serif;
   font-size: small;
@@ -34,7 +81,36 @@ body {
   font-weight: normal;
   padding: 0.5em; }
 
-.container {
+/************************ stylings for all links  (universally applied) ************************/
+/* removing all underlines because it can make it difficult to read and making all links bold instead */
+a {
+  text-decoration: none;
+  font-weight: bold; }
+
+/* setting color for all unvisited links */
+a:link {
+  color: #3124ea;
+  /* bluish color */ }
+
+/* setting color for all visited links */
+a:visited {
+  color: #30502a;
+  /* greenish color */ }
+
+/* underlining (with a dotted border) for all links that are be hovered */
+a:hover {
+  border-bottom: 2px dotted #000000; }
+
+/************************ styling input controls (universally applied) ***************************/
+input, textarea {
+  border: 1px solid #635e5e;
+  /* grayish border */ }
+
+/************************ styling sections (universally applied) and table of contents (webpage navigation) ***************************/
+section, nav.webpage-nav {
+  margin-top: 2em; }
+
+.main-container {
   max-width: 1000px;
   /* helps keep the page from not being to wide on big/wide devices */
   width: 80%;
@@ -68,35 +144,6 @@ h3 {
   margin-bottom: 0.5em;
   /* create some distance from the content directly below */ }
 
-/************************ stylings for all links  (universally applied) ************************/
-/* removing all underlines because it can make it difficult to read and making all links bold instead */
-a {
-  text-decoration: none;
-  font-weight: bold; }
-
-/* setting color for all unvisited links */
-a:link {
-  color: #3124ea;
-  /* bluish color */ }
-
-/* setting color for all visited links */
-a:visited {
-  color: #30502a;
-  /* greenish color */ }
-
-/* underlining (with a dotted border) for all links that are be hovered */
-a:hover {
-  border-bottom: 2px dotted #000000; }
-
-/****************************** stylings for all <hr> ******************************/
-hr {
-  /* Note: styling adapted from http://stackoverflow.com/questions/6382023/changing-the-color-of-an-hr-element */
-  width: 60%;
-  display: block;
-  margin: 2em auto;
-  border: none;
-  border-top: 1px solid #7d7d7d; }
-
 /********** stylings for all lists related elements; these are universally applied **********/
 /* creating an indentation and additional spacing for all <li> and <dd> */
 li, dd {
@@ -119,15 +166,6 @@ ol {
 /* setting left margin of all definition lists */
 dl {
   margin-left: 1em; }
-
-/************************ styling input controls (universally applied) ***************************/
-input, textarea {
-  border: 1px solid #635e5e;
-  /* grayish border */ }
-
-/************************ styling sections (universally applied) and table of contents (webpage navigation) ***************************/
-section, nav.webpage-nav {
-  margin-top: 2em; }
 
 /*************************************************** styling navigation *******************************************/
 nav.website-nav {
@@ -244,7 +282,7 @@ div.image {
   /* the next two rules are used make scrolling easier and better appearance on smaller devices */
   body {
     background-color: #ffffff; }
-  div.container {
+  div.main-container {
     width: 100%;
     padding: 0; }
   #a-form textarea {

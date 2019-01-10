@@ -1,0 +1,47 @@
+
+/********************************************* styling body and the main container **********************************************/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Raleway", Arial, sans-serif;
+	font-size: small; /* standardizing the font that will be used */
+	color: #000000;
+	background-color: #fffeec;
+	font-weight: normal;
+	padding: 0.5em;
+}
+
+/************************ stylings for all links  (universally applied) ************************/  
+/* removing all underlines because it can make it difficult to read and making all links bold instead */
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* setting color for all unvisited links */
+a:link { 
+	color: #3124ea; /* bluish color */
+}
+
+/* setting color for all visited links */
+a:visited { 
+	color: #30502a; /* greenish color */
+}
+
+
+/* underlining (with a dotted border) for all links that are be hovered */
+a:hover {    
+	border-bottom: 2px dotted #000000;
+}
+
+/************************ styling input controls (universally applied) ***************************/
+input, textarea {
+	border: 1px solid #635e5e; /* grayish border */
+}
+
+/************************ styling sections (universally applied) and table of contents (webpage navigation) ***************************/
+section, nav.webpage-nav {
+	margin-top: 2em;
+}
