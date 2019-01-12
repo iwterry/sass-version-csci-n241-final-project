@@ -32,7 +32,7 @@
 					A reply will be sent to your email address as soon as possible.
 				</p> 
 				
-				<form id="contact-form" action="http://cs.iupui.edu/~iwterry/n241/finalProject/website/contact.html" method="post">	
+				<form id="contact-form">	
 					<p>
 						<label for="submitter-name">Your name <strong>(required)</strong></label> <br>
 						<input type="text" id="submitter-name" name="name"  value="" required>
@@ -48,11 +48,10 @@
 						<!-- Note: According to https://www.w3.org/TR/html5/forms.html#the-required-attribute - it's best 
 						practice to provide a default checked option and have "required" attribute on all options. -->
 						<!-- I will hide default choice using CSS in order to know whether user made a choice and not confuse users. -->
-						<p class="hide"> 
+						<p> 
 							<input type="radio" id="purpose-not-given" name="purpose" value="" required checked>
-							<!-- I want a good message for text-only (w/ no CSS) situations -->
 							<label for="purpose-not-given">
-								This default option is not meant to be chosen. Please choose from among the remaining options.
+								Please choose among the other options for your purpose.
 							</label>
 						</p>
 						<p>
@@ -68,7 +67,7 @@
 							<label for="purpose-resources">Suggest additional resources that should be added.</label>
 						</p>
 						<p>
-							<input type="radio" id="purpose-other" name="purpose" value="other" > 
+							<input type="radio" id="purpose-other" name="purpose" value="other" required> 
 							<label for="purpose-other">Have another purpose for commenting.</label>
 						</p>
 					</fieldset>
